@@ -1,37 +1,57 @@
 package com.example.maisbonitinho;
 
 public class Item {
-    String name;
-    String email;
-    int image;
+    String nome;
+    String sinopse;
+    String editora;
+    String ano;
+    int foto;
 
-    public Item(String name, String email, int image) {
-        this.name = name;
-        this.email = email;
-        this.image = image;
+    public Item(String nome,String sinopse, String editora, String ano, int foto ) {
+        this.nome = nome;
+        this.sinopse = sinopse;
+        editora = editora;
+        this.ano = ano;
+        this.foto = foto;
     }
 
-    public String getName() {
-        return name;
+    public String getNome() {
+        return nome;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
-    public String getEmail() {
-        return email;
+    public String getSinopse() {
+        return sinopse;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setSinopse(String sinopse) {
+        this.sinopse = sinopse;
     }
 
-    public int getImage() {
-        return image;
+    public String getEditora() {
+        return editora;
     }
 
-    public void setImage(int image) {
-        this.image = image;
+    public void setEditora(String editora) {
+        this.editora = editora;
+    }
+
+    public String getAno() {
+        return ano;
+    }
+
+    public void setAno(String ano) {
+        this.ano = ano;
+    }
+
+    public int getFoto() {
+        return foto;
+    }
+
+    public void setFoto(int foto) {
+        this.foto = foto;
     }
 }

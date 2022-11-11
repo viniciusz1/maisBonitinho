@@ -12,4 +12,15 @@
         android:id="@+id/recyclerview"
         tools:ignore="MissingConstraints" />
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/botaoflutuante"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="?attr/actionModeCloseDrawable" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
