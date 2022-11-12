@@ -16,6 +16,13 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
+    static List<Item> items = new ArrayList<Item>();
+
+
+    public void mudarParaDetalhes(int posicao){
+        Item item = items.get(posicao);
+        Intent i = new Intent(this, DetalhesActivity.class);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,8 +31,8 @@ public class MainActivity extends AppCompatActivity {
 
         RecyclerView recyclerView = findViewById(R.id.recyclerview);
 
-        List<Item> items = new ArrayList<Item>();
         items.add(new Item("John wick", "johnalçsdlfkj@gmail.com","sdkjçflas", "çldsakfjçlasjd", R.drawable.ima));
+        items.add(new Item("Cléber", "johnalçsdlfkj@gmail.com","sdkjçflas", "çldsakfjçlasjd", R.drawable.ima));
 
         FloatingActionButton botao = findViewById(R.id.botaoflutuante);
         botao.setOnClickListener(new View.OnClickListener() {
