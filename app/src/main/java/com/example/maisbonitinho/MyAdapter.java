@@ -1,7 +1,10 @@
 package com.example.maisbonitinho;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
@@ -12,10 +15,12 @@ import java.util.List;
 public class MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
     public Context context;
     public static List<Item> items;
+    public SelectListener listener;
 
-    public MyAdapter(Context context, List<Item> items) {
+    public MyAdapter(Context context, List<Item> items, SelectListener listener) {
         this.context = context;
         this.items = items;
+        this.listener = listener;
     }
 
     @NonNull
@@ -25,10 +30,17 @@ public class MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull MyViewHolder holder, @SuppressLint("RecyclerView") int position) {
         holder.nameView.setText(items.get(position).getNome());
         holder.emailView.setText(items.get(position).getSinopse());
         holder.imageView.setImageResource(items.get(position).getFoto());
+
+        holder.cardView.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                listener.onItemClicked(items.get(position));
+            };
+        });
     }
 
     @Override
