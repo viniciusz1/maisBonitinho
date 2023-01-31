@@ -10,7 +10,7 @@ public class Item {
     public Item(String nome,String sinopse, String editora, String ano, int foto ) {
         this.nome = nome;
         this.sinopse = sinopse;
-        editora = editora;
+        this.editora = editora;
         this.ano = ano;
         this.foto = foto;
     }

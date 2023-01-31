@@ -1,7 +1,10 @@
 package com.example.maisbonitinho;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
@@ -27,9 +30,17 @@ public class DetalhesActivity  extends AppCompatActivity {
             String ano = extras.getString("ano");
             TextView anotxt = (TextView) findViewById(R.id.txtano);
             anotxt.setText(ano);
-            String foto = extras.getString("foto");
-
+            int foto = extras.getInt("foto");
+            ImageView imageview = (ImageView) findViewById(R.id.imageDetalhes);
+            imageview.setImageResource(foto);
         }
 
+        Button botaoVoltar = findViewById(R.id.buttonReturnDetalhes);
+        botaoVoltar.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View arg0) {
+                finish();
+            }
+        });
     }
 }

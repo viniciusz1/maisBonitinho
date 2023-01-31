@@ -42,9 +42,9 @@ public class MainActivity extends AppCompatActivity implements SelectListener{
             String sinopse = extras.getString("sinopse");
             String editora = extras.getString("editora");
             String ano = extras.getString("ano");
-            String foto = extras.getString("foto");
+            int foto = extras.getInt("foto");
 
-            items.add(new Item(nome, sinopse, editora, ano, R.drawable.ima));
+            items.add(new Item(nome, sinopse, editora, ano, foto));
         }else {
             items.add(new Item("John wick", "johnalçsdlfkj@gmail.com","sdkjçflas", "çldsakfjçlasjd", R.drawable.ima));
             items.add(new Item("Cléber", "johnalçsdlfkj@gmail.com","sdkjçflas", "çldsakfjçlasjd", R.drawable.ima));
