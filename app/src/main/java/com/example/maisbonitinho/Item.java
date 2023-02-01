@@ -1,13 +1,15 @@
 package com.example.maisbonitinho;
 
+import android.net.Uri;
+
 public class Item {
     String nome;
     String sinopse;
     String editora;
     String ano;
-    int foto;
+    Uri foto;
 
-    public Item(String nome,String sinopse, String editora, String ano, int foto ) {
+    public Item(String nome,String sinopse, String editora, String ano, Uri foto ) {
         this.nome = nome;
         this.sinopse = sinopse;
         this.editora = editora;
@@ -47,11 +49,11 @@ public class Item {
         this.ano = ano;
     }
 
-    public int getFoto() {
+    public Uri getFoto() {
         return foto;
     }
 
-    public void setFoto(int foto) {
+    public void setFoto(Uri foto) {
         this.foto = foto;
     }
 }

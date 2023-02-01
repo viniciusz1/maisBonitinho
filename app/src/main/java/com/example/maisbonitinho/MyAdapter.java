@@ -33,7 +33,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
     public void onBindViewHolder(@NonNull MyViewHolder holder, @SuppressLint("RecyclerView") int position) {
         holder.nameView.setText(items.get(position).getNome());
         holder.emailView.setText(items.get(position).getSinopse());
-        holder.imageView.setImageResource(items.get(position).getFoto());
+        holder.imageView.setImageURI(items.get(position).getFoto());
 
         holder.cardView.setOnClickListener(new View.OnClickListener(){
             @Override

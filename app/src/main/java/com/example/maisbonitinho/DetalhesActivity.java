@@ -1,5 +1,6 @@
 package com.example.maisbonitinho;
 
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -30,9 +31,11 @@ public class DetalhesActivity  extends AppCompatActivity {
             String ano = extras.getString("ano");
             TextView anotxt = (TextView) findViewById(R.id.txtano);
             anotxt.setText(ano);
-            int foto = extras.getInt("foto");
+            String foto = extras.getString("foto");
+            Uri fotoConvertida = Uri.parse(foto);
+
             ImageView imageview = (ImageView) findViewById(R.id.imageDetalhes);
-            imageview.setImageResource(foto);
+            imageview.setImageURI(fotoConvertida);
         }
 
         Button botaoVoltar = findViewById(R.id.buttonReturnDetalhes);

@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
@@ -42,12 +43,12 @@ public class MainActivity extends AppCompatActivity implements SelectListener{
             String sinopse = extras.getString("sinopse");
             String editora = extras.getString("editora");
             String ano = extras.getString("ano");
-            int foto = extras.getInt("foto");
-
-            items.add(new Item(nome, sinopse, editora, ano, foto));
+            String foto = extras.getString("foto");
+            Uri fotoconvetida = Uri.parse(foto);
+            items.add(new Item(nome, sinopse, editora, ano, fotoconvetida));
         }else {
-            items.add(new Item("John wick", "johnalçsdlfkj@gmail.com","sdkjçflas", "çldsakfjçlasjd", R.drawable.ima));
-            items.add(new Item("Cléber", "johnalçsdlfkj@gmail.com","sdkjçflas", "çldsakfjçlasjd", R.drawable.ima));
+//            items.add(new Item("John wick", "johnalçsdlfkj@gmail.com","sdkjçflas", "çldsakfjçlasjd", R.drawable.ima));
+//            items.add(new Item("Cléber", "johnalçsdlfkj@gmail.com","sdkjçflas", "çldsakfjçlasjd", R.drawable.ima));
         }
 
         RecyclerView recyclerView = findViewById(R.id.recyclerview);
@@ -75,7 +76,7 @@ public class MainActivity extends AppCompatActivity implements SelectListener{
         i.putExtra("sinopse",  item.getSinopse());
         i.putExtra("editora", item.getEditora());
         i.putExtra("ano", item.getAno());
-        i.putExtra("foto", item.getFoto());
+        i.putExtra("foto", item.getFoto().toString());
         startActivity(i);
     }
 }
