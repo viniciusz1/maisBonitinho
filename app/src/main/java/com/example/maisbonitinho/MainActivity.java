@@ -22,6 +22,7 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity implements SelectListener{
 
     static List<Item> items = new ArrayList<Item>();
+    private MyAdapter myAdapter;
 
 
     public void mudarParaDetalhes(int posicao){
@@ -64,9 +65,10 @@ public class MainActivity extends AppCompatActivity implements SelectListener{
             }
 
         });
+        myAdapter = new MyAdapter(getApplicationContext(), items, this);
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        recyclerView.setAdapter(new MyAdapter(getApplicationContext(), items, this));
+        recyclerView.setAdapter(myAdapter);
     }
 
     @Override
@@ -79,4 +81,10 @@ public class MainActivity extends AppCompatActivity implements SelectListener{
         i.putExtra("foto", item.getFoto().toString());
         startActivity(i);
     }
+    @Override
+    public void deleteItem(int position){
+        items.remove(position);
+        myAdapter.notifyItemRemoved(position);
+    }
+
 }

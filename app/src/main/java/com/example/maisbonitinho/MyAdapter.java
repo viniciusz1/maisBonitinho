@@ -34,6 +34,11 @@ public class MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
         holder.nameView.setText(items.get(position).getNome());
         holder.emailView.setText(items.get(position).getSinopse());
         holder.imageView.setImageURI(items.get(position).getFoto());
+        holder.botaoDeletar.setOnClickListener(view -> {
+            listener.deleteItem(position);
+        });
+
+
 
         holder.cardView.setOnClickListener(new View.OnClickListener(){
             @Override
