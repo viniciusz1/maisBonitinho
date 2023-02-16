@@ -1,5 +1,6 @@
 package com.example.maisbonitinho;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
@@ -38,7 +39,17 @@ public class DetalhesActivity  extends AppCompatActivity {
             imageview.setImageURI(fotoConvertida);
         }
 
+        Button botaoEditar = findViewById(R.id.buttonEditar);
+        botaoEditar.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View arg0) {
+                Intent intent = new Intent();
+
+            }
+        });
+
         Button botaoVoltar = findViewById(R.id.buttonReturnDetalhes);
+
         botaoVoltar.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View arg0) {

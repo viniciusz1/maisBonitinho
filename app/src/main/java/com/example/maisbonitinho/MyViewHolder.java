@@ -18,6 +18,7 @@ public class MyViewHolder extends RecyclerView.ViewHolder {
     TextView nameView, emailView;
     RelativeLayout cardView;
     Button botaoDeletar;
+    Button botaoEditar;
 
     public MyViewHolder(@NonNull View itemView) {
         super(itemView);
@@ -26,6 +27,7 @@ public class MyViewHolder extends RecyclerView.ViewHolder {
         this.emailView = itemView.findViewById(R.id.email);
         this.cardView = itemView.findViewById(R.id.containerItem);
         this.botaoDeletar = itemView.findViewById(R.id.deletarBotao);
+        this.botaoEditar = itemView.findViewById(R.id.botaoEditar);
     }
 
 

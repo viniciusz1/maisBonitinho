@@ -38,6 +38,9 @@ public class MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
             listener.deleteItem(position);
         });
 
+        holder.botaoEditar.setOnClickListener(view -> {
+
+        });
 
 
         holder.cardView.setOnClickListener(new View.OnClickListener(){
