@@ -39,14 +39,7 @@ public class DetalhesActivity  extends AppCompatActivity {
             imageview.setImageURI(fotoConvertida);
         }
 
-        Button botaoEditar = findViewById(R.id.buttonEditar);
-        botaoEditar.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View arg0) {
-                Intent intent = new Intent();
 
-            }
-        });
 
         Button botaoVoltar = findViewById(R.id.buttonReturnDetalhes);
 
