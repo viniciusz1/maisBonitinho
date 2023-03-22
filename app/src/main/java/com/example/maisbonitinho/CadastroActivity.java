@@ -52,6 +52,8 @@ public class CadastroActivity extends AppCompatActivity {
         ImageView imageView =  findViewById(R.id.imageViewCadastro);
         imageView.setOnClickListener((view -> pickImage()));
 
+
+
         Button botaoCadastro = findViewById(R.id.botaoCadastro);
         botaoCadastro.setOnClickListener((v -> {
             Intent i = new Intent(CadastroActivity.this, MainActivity.class);
@@ -70,5 +72,9 @@ public class CadastroActivity extends AppCompatActivity {
             }
             startActivity(i);
         }));
+        ImageView returnButton = findViewById(R.id.returnCadastro);
+        returnButton.setOnClickListener(view -> {
+            finish();
+        });
     }
 }

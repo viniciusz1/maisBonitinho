@@ -41,13 +41,10 @@ public class DetalhesActivity  extends AppCompatActivity {
 
 
 
-        Button botaoVoltar = findViewById(R.id.buttonReturnDetalhes);
+        ImageView botaoVoltar = findViewById(R.id.returnDetalhes);
 
-        botaoVoltar.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View arg0) {
-                finish();
-            }
+        botaoVoltar.setOnClickListener(view -> {
+            finish();
         });
     }
 }
