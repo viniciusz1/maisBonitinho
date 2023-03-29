@@ -47,9 +47,6 @@ public class                                                                    
             String foto = extras.getString("foto");
             Uri fotoconvetida = Uri.parse(foto);
             items.add(new Item(nome, sinopse, editora, ano, fotoconvetida));
-        }else {
-//            items.add(new Item("John wick", "johnalçsdlfkj@gmail.com","sdkjçflas", "çldsakfjçlasjd", R.drawable.ima));
-//            items.add(new Item("Cléber", "johnalçsdlfkj@gmail.com","sdkjçflas", "çldsakfjçlasjd", R.drawable.ima));
         }
 
         RecyclerView recyclerView = findViewById(R.id.recyclerview);
